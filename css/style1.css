@@ -1,0 +1,878 @@
+.clear-fix{
+    overflow: hidden;
+}
+*{
+    margin: 0;
+    font-family: 'PT Serif', serif;
+}
+.flex{
+    display: flex;
+}
+.center{
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+/* ul>li{
+    line-height: 200%;
+} */
+@media screen and (min-width: 400px){
+    /*CSS FOR HEADER */
+    div.header > div.menu-bar{
+        position: relative;
+        height: 100px;
+        max-width: 1680px;
+        margin: 0 auto;
+    }
+    div.menu-bar > div.left{
+        height: 100%;
+        width: 70%;
+        padding: 10px;
+        box-sizing: border-box;
+        float: left;
+    }
+    div.menu-bar > div.left > a {
+        display: inline-block;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    div.menu-bar > div.left > a > img{
+        vertical-align: bottom;
+        height: 100%;
+    }
+    div.menu-bar > div.left > ul.main-menu{
+        line-height: 75px;
+        margin-left: 10px; 
+    }
+    div.menu-bar > div.left > ul.main-menu>li{
+        text-transform: capitalize;
+        font-weight: bold;
+        float: left;
+        padding: 0px 35px 0px 0px;
+    }
+    div.menu-bar > div.left > ul.main-menu>li >a{
+        color: black;
+        font-size: 20px;
+    }
+    div.menu-bar > div.left > ul.main-menu>li >a:hover{
+        color: #4ecc0581;
+    }
+    div.menu-bar > div.left > ul.main-menu>li >a:active{
+        color: lightgreen;
+        text-shadow: 1px 2px 2px darkgreen;
+    }
+    div.menu-bar > div.right{
+        height: 100%;
+        box-sizing: border-box;
+        position: relative;
+        width: 300px;
+        float: right;
+        padding: 34px 10px;
+    } 
+    div.menu-bar > div.right > div.web-hai{
+        height: 100%;
+        margin-right: 20px;
+    }
+    div.menu-bar > div.right > div.web-hai > a > img{
+        height: 77px;
+        position: relative;
+        top: -27px;
+    }
+    div.menu-bar > div.right > a{
+        display: block; 
+    }
+    /* div.menu-bar > div.right > div:not(:last-child){
+        line-height: 100px;
+    } */
+    div.menu-bar > div.right > div:nth-child(2) > input{
+        background: transparent;
+        border: 1px solid rgb(116, 116, 116);
+        border-radius: 20px;
+        padding: 5px 20px;
+        font-size: 17px;
+        height: 33px;
+    }
+    div.menu-bar > div.right > div:nth-child(3){
+        padding-left: 20px;
+    }
+    div.menu-bar > div.right > div.search-input{
+        line-height: 100px;
+        position: absolute;
+        top: 0%;
+        right: 15%;
+        display: none;
+        z-index: 20;
+    }
+    .webhai{
+        color: #36b8cc;
+    }
+    div.menu-bar > div.right > div.search-input >p{
+        position: absolute;
+        line-height: 100px;
+        top: 0%;
+        right: 4%;
+        cursor:default;
+    }
+    div.right > div.search-input > ul{
+        max-height: 200px;
+        width: 320px;
+        border-radius: 0px 0px 15px 15px;
+        border: 2px double black;
+        border-top: none;
+        padding: 2px 80px 5px 20px;
+        font-size: 15px;
+        display: none;
+        background-color: #ffffbbec;
+        position: absolute; 
+        top: 65%;
+        z-index: 14;
+        line-height: 21px;
+        overflow: auto;
+    }
+    div.right > div.search-input > ul::-webkit-scrollbar {
+        width: 15px;
+        height: 90%;
+    }
+    /* Track */
+    div.right > div.search-input > ul::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
+    }
+    /* Handle */
+    div.right > div.search-input > ul::-webkit-scrollbar-thumb {
+        background: #79794e;
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    div.right > div.search-input > ul::-webkit-scrollbar-thumb:hover {
+        background: #c2c22dec; 
+    }
+    div.right > div.search-input > ul.hint > li > a{
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        color: black;
+    }
+    div.right > div.search-input > input{
+        height: 30px;
+        width: 320px;
+        border-radius: 15px;
+        border: 2px double black;
+        font-size: 15px;
+        padding: 0px 80px 0px 20px;
+        background-color: #ffffbb;
+    }
+    div.right > div.login{
+        position: absolute;
+        background-color: darkseagreen;
+        padding: 10px 20px;
+        right: 100px;
+        top: 80px;
+        width: 300px;
+        z-index: 20;
+    }
+    div.right > div.login::after{
+        content: " ";
+        border-width: 15px;
+        border-style: solid;
+        border-color: transparent transparent darkseagreen transparent;
+        position: absolute;
+        right: 7%;
+        top: -8%;
+    }
+    div.right > div.login > div.x{
+        float: right;
+    }
+    div.right > div.login >h2{
+        text-align: center;
+        margin-top: 22px;
+        padding-left: 20px;
+        font-size: 35px;
+        color: greenyellow;
+    }
+    div.right > div.login > form > div.type >input{
+        padding: 0px 10px;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid black;
+        background: transparent;
+        font-size: 15px;
+        margin: 5px 0px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    div.right > div.login > form > div.button{
+        text-align: center;
+    }
+    div.right > div.login > form > div.button > input{
+        border-radius: 30px;
+        border: none;
+        font-size: 15px;
+        width: 115px;
+        padding: 9px 10px;
+        margin-top: 10px;
+    }
+    div.right > div.login > form > div.button > input:last-child{
+        background-color: lightgreen;
+    }
+    div.right > div.login{
+        border-radius: 30px;
+    }
+    div.right > div.login > p{
+        text-align: center;
+        line-height: 30px;
+        margin-top: 10px;
+    }
+    div.right > div.login > div.other > hr:first-child{
+        position: absolute;
+        bottom: 90px;
+        left: 0;
+        width: 110px;
+    }
+    div.right > div.login > div.other > hr:last-child{
+        position: absolute;
+        bottom: 90px;
+        width: 110px;
+        right: 0;
+    }
+    div.right > div.login > div.other >p{
+        text-align: center;
+    }
+    div.right > div.login > div.icon > ul >li{
+        width: 25%;
+        text-align: center;
+    }
+    /*CSS BANNER*/
+    div.header>div.banner{
+        margin: 0 auto;
+        padding: 0px;
+        background-image: url(../images/back-groundimage/bg1.jpg);
+        background-size: cover;
+        height: 500px;
+
+    }
+    div.header > div.banner > img{
+        height: 100%;
+    }
+
+
+
+    /*CSS FOR BODY/DAYLY*/
+    div.body{
+        background: #f4f4f4;
+    }
+    div.dayly > div.day{
+        padding: 0;
+        background: white;
+    }
+    div.dayly > div.day > div.dayinner{
+        margin: 0 auto;
+        width: 1110px;
+        height: 60px;
+    }
+    div.dayly > div.day > div.dayinner > ul{
+        height: 100%;
+    }
+    div.dayly > div.day > div.dayinner > ul > li:hover{
+        cursor: pointer;
+        text-shadow: 1px 1px 3px red;
+    }
+    div.dayly > div.day > div.dayinner > ul > li{
+        min-width: 12.5%;
+        text-transform: uppercase;
+        color: black;
+        line-height: 60px;
+    }
+    div.dayly > div.day > div.dayinner > ul > li>a{
+        font-size: 25px;
+        font-family: 'Acme', sans-serif;
+    }
+    div.dayly > div.day > div.dayinner > ul > li>a:visited{
+        color: blue;
+    }
+    div.dayly > div.day > div.dayinner > ul > li>a:link{
+        color: blue;
+    }
+    div.dayly>div.color{
+        background: #f4f4f4;
+        padding-top:20px;
+    }
+    div.dayly>div.new{
+        background: #f4f4f4;
+        padding-top:20px;
+    }
+    div.row{
+        width: 1125px;
+        margin:0 auto;
+        background: #f4f4f4;
+        position: relative;
+    }
+    div.row > ul >li:hover >img{
+        animation: abc 0.5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+    @keyframes abc {
+        from { 
+            transform: scale(1);
+            opacity: 1;
+        }
+        to { 
+            transform: scale(1.2);
+            opacity: 0.2;
+        }
+    }
+    div.row > ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    div.row > ul > li{
+        margin: 0px 15px 15px 0;
+        position: relative;
+        background-color: #14b914b9;
+        overflow: hidden;
+    }
+    div.row > ul > li > a{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+    div.row > ul > li > img{
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+    }
+
+    div.row > ul > li > div.info, div.back{
+        position: absolute;
+        left: 4%;
+        top: 3%;
+        width: 160px;
+        height: 180px;
+    }
+    div.row > ul > li:nth-child(4) > div.back{
+        width: 260px !important;
+    }
+    div.row > ul > li > div.back{
+        display: none;
+        color: white;
+    }
+    div.row > ul > li > div.back > p.author{
+        font-size: 13px;
+        line-height: 10px;
+    }
+    div.row > ul > li > div.back > p.tomtat{
+        line-height: 18px;
+        font-size: 14px;
+        padding-top: 20px;
+    }
+    div.row > ul > li > div.info > p.type{
+        color: red;
+        position: absolute;
+        bottom: -15%;
+        z-index: 2;
+    }
+    div.row > ul > li > div.info > h3{
+        font-size: 20px;
+    }
+    div.row > ul > li > div.info > p > span{
+        font-size: 15px;
+    }
+    div.row > ul > li > div.info > p.love > i{
+        color: red;
+        font-size: 15px;
+    }
+    /*CSS FOR NEW*/
+    div.new {
+        position: relative;
+    }
+    div.new > h2{
+        background-color: white;
+        height: 60px;
+        line-height: 210%;
+        margin-bottom: 15px;
+    }
+    .ul-none{
+        display: none !important;
+    }
+    div.new > div.row > i{
+        position: absolute;
+        font-size: 100px;
+        color: #1ef7ec96;
+    }
+    div.new > div.row > i:hover{
+        color: #94f7f2a2;
+    }
+    div.new > div.row > i:first-child{
+        left: -91px;
+        top: 55px;
+    }
+    div.new > div.row > i:last-child{
+        right: -91px;
+        top: 55px;
+    }
+    /*CSS FOR MOST_TRANNING*/
+    div.trending > h2{
+        background-color: white;
+        height: 60px;
+        line-height: 210%;
+        margin-bottom: 15px;
+    }
+    div.trending > div.list{
+        width: 1125px;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        margin: 0 auto;
+    }
+    div.trending > div.list > div.item{
+        position: relative;
+        height: 150px;
+        width: 100%;
+        margin-bottom: 2px;
+    }
+    div.trending > div.list > div.item > a{
+        display: block;
+        height: 100%;
+        width: 100%;
+        color: black;
+        background-color: antiquewhite;
+    }
+    div.trending > div.list > div.item > a >div.color{
+        height: 100%;
+        position: absolute;
+    }
+    div.trending > div.list > div.item:first-child > a >div.color{
+        width: 90%;
+        border-radius: 0px 30px 30px 0px;
+        background-color: rgba(255, 228, 196, 0.8);
+    }
+    div.trending > div.list > div.item:nth-child(2) > a >div.color{
+        width: 85%;
+        border-radius: 0px 30px 30px 0px;
+        background-color: rgba(255, 228, 196, 0.8);
+    }
+    div.trending > div.list > div.item:nth-child(3) > a >div.color{
+        width: 60%;
+        border-radius: 0px 30px 30px 0px;
+        background-color: rgba(255, 228, 196, 0.8);
+    }
+    div.trending > div.list > div.item:nth-child(4) > a >div.color{
+        width: 55%;
+        border-radius: 0px 30px 30px 0px;
+        background-color: rgba(255, 228, 196, 0.8);
+    }
+    div.trending > div.list > div.item:nth-child(5) > a > div.color{
+        width: 45%;
+        border-radius: 0px 30px 30px 0px;
+        background-color: rgba(255, 228, 196, 0.8);
+    }
+    div.trending > div.list > div.item:last-child > a > div.color{
+        width: 43%;
+        border-radius: 0px 30px 30px 0px;
+        background-color: rgba(255, 228, 196, 0.8);
+    }
+    div.trending > div.list > div.item > a > h2{
+        position: absolute;
+        width: 50px;
+        line-height: 150px;
+        font-size: 50px;
+        font-weight: bold;
+        color: lawngreen;
+    }
+    div.trending > div.list > div.item > a > img{
+        object-fit: cover;
+        height: 100%;
+        position: absolute;
+        top: 0%;
+        left: 5%;
+    }
+    div.trending > div.list > div.item > div.info{
+        position: absolute;
+        left: 25%;
+        top: 30%;
+    }
+    div.trending > div.list > div.item > div.info > p.type{
+        font-size: 14px;
+    }
+    div.trending > div.list > div.item > div.info > p.name{
+        font-size: 20px;
+        font-weight: bold;
+        color: black;
+    }
+    div.trending > div.list > div.item > div.info > p.author{
+        font-size: 12px;
+    }
+    /*FOOTER CSS*/
+    div.footer{
+        background-color: aliceblue;
+    }
+
+    div.footer > div.download p{
+        color: black;
+        font-size: 17px;
+        line-height: 50px;
+    }
+    div.footer > div.download img{
+        width: 8%;
+    }
+    div.footer > div.icon{
+        width: 30%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    ul.icon{
+        padding: 0;
+    }
+    ul.icon > li {
+        min-width: 25%;
+        text-align: center;
+        margin: 5% 0;
+        padding: 0;
+    }
+    ul.icon > li > a > i{
+        color: black;
+    }
+    ul.icon > li > a > i:hover{
+        color: #b9b8a2;
+    }
+    ul.icon > li > a:active{
+        color: #e16845;
+    }
+    div.footer > div.about{
+        width: 50%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    div.about > ul {
+        padding: 0;
+    }
+    div.about > ul > li > a{
+        font-size: 18px;
+    }
+    div.about > ul > li > a:link{
+        color: black;
+    }
+    div.about > ul > li > a:active{
+        color: #525252d3;
+    }
+    iv.about > ul > li > a:visited{
+        color: black;
+    }
+    div.about > ul> li > select{
+        border-radius: 10px;
+        border: 1px solid bisque;
+        padding: 2px;
+    }
+    div.about > ul > li:nth-child(odd){
+        min-width: 15%;
+        text-align: center;
+        margin: 5% 0;
+        padding: 0;
+    }
+    div.about > ul > li:nth-child(even){
+        color:bisque;
+        text-align: center;
+        margin: 5% 0;
+        padding: 0;
+    }
+    div.copyright > p{
+        padding-bottom: 2%;
+        font-size: 17px;
+        color: rgb(49, 38, 38);
+    }
+
+    /*CSS FOR GO TOP*/
+    div.gototop{
+        position: fixed;
+        right: 2%;
+        bottom: 0%;
+    }
+    div.gototop > i{
+        color: #f3deb2e1;
+    }
+    div.gototop > i:hover {
+        cursor:pointer;
+        color: #fdb418a9;
+    }
+    div.gototop > i{
+        font-size: 105px;
+        opacity: 0.4;
+    }
+
+
+    /*CSS FOR MORE.HTML*/
+    div.body-more{
+        background-color: #f7f4e486;
+        animation: AnimationName 4s ease infinite;
+        background: linear-gradient(84deg, #eadc2c, #1f9f7e, #e16845);
+        opacity: 0.9;
+        background-size: 300% 300%;
+    }
+    div.body-more > div.row{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap-reverse;
+        background-color: #f7f4e486;
+        animation: AnimationName 4s ease infinite;
+        background: linear-gradient(84deg, #eadc2c, #1f9f7e, #e16845);
+        background-size: 300% 300%;
+    }
+    div.body-more > div.row > div{
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        width: 13.9%;
+    }
+    @keyframes AnimationName { 
+        0%{background-position:0% 15%}
+        50%{background-position:100% 86%}
+        100%{background-position:0% 15%}
+    }
+    div.body-more > div.row > div:hover{
+        outline: 5px double #ffbb00;
+        z-index: 0;
+    }
+    div.body-more > div.row > div > div{
+        position: relative;
+        width: 100%;
+        margin-top: 2px;    
+    }
+    div.body-more > div.row > div > h2{
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 0;
+        margin: 0;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        background-color:rgb(255, 205, 255, 0);
+    }
+    div.body-more > div.row > div >div >img{
+        width: 100%;
+    }
+    div.body-more > div.row > div >div >a{
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+    }
+    div.body-more > div.row > div >div > div.info{
+        position: absolute;
+        height: 100%;
+        width: 80%;
+        top: 4%;
+        left: 4%;
+    }
+    div.body-more > div.row > div >div > div.info >p.type{
+        position: absolute;
+        bottom: 10%;
+        left: 0%;
+    }
+    div.body-more > div.row > div >div > div.info > p> i{
+        color: red;
+        font-size: 15px;
+    }
+    div.body-more > div.row > div >div > div.info >h3{
+        font-size: 18px;
+    }
+    div.body-more > div.row > div >div >div.back{
+        display: none;
+    }
+
+
+    /*CSS FOR INTRUYEN.HTML*/
+    div.body-intruyen{
+        
+    }
+    div.body-intruyen > div.anh-bu{
+        background-image: url(/images/anhtruyen/anhbu/subzero.jpg);
+    }
+    div.body-intruyen > div.anh-bu > img{
+        position: absolute;
+        top: 100px;
+    }
+    div.body-intruyen > div.tap{
+        margin: 0 auto;
+        width: 1200px;
+        position: relative;
+        top: 10%;
+    }
+    div.body-intruyen > div.tap > img{
+        position: absolute;
+        top: 0;
+    }
+    div.body-intruyen > div.tap > div.title{
+        margin: 0 auto;
+        text-align: center;
+        height: 240px;
+        background-color: transparent !important;
+    }
+    div.body-intruyen > div.tap > div.title > div.inner{
+        padding-top: 4%;
+    }
+    div.body-intruyen > div.tap > div.title > div.inner > h2{
+        font-size: 55px;
+        color: white;
+    }
+    div.body-intruyen > div.tap > div.title > div.inner > p.author{
+        color: white;
+    }
+    div.body-intruyen > div.tap > div.both{
+        background-color: #d8d8d8;
+        padding: 30px 0px 30px 30px;
+        height: 100%;
+    }
+    div.body-intruyen > div.tap > div.both > div.left{
+        width: 60%;
+        flex-wrap: wrap;
+    }
+    div.body-intruyen > div.tap > div.both > div.left > a{
+        display: block;
+        height: 75px;
+        width: 100%;
+        padding: 10px 0px;
+    }
+    div.body-intruyen > div.tap > div.both > div.left > a:not(:first-child){
+        border-top: 1px solid white;
+    }
+    div.body-intruyen > div.tap > div.both > div.left > a > div.sotap{
+        height: 100%;
+        width: 100%;
+    }
+    div.body-intruyen > div.tap > div.both > div.left > a > div.sotap > img{
+        height: 100%;
+    }
+    div.body-intruyen > div.tap > div.both > div.left > a > div.sotap > h3{
+        line-height: 75px;
+        color: rgb(36, 36, 36);
+        padding-left: 15px; 
+        width: 50%;
+        font-size: 21px;
+    }
+    div.body-intruyen > div.tap > div.both > div.left > a > div.sotap > p{
+        line-height: 75px;
+        color: #a5a5a5;
+        font-size: 18px;
+    }
+    div.body-intruyen > div.tap > div.both > div.left > a > div.sotap > i{
+        line-height: 75px;
+        color: #a5a5a5;
+        padding-left: 15px; 
+        font-size: 17px;
+    }
+    div.body-intruyen > div.tap > div.both > div.left > a > div.sotap > span.like{
+        line-height: 75px;
+        color: #a5a5a5;
+        font-size: 18px;
+    }
+    div.body-intruyen > div.tap > div.both > div.right{
+        width: 40%;
+        border-left: 3px solid white; 
+        margin: 20px;
+    }
+    div.body-intruyen > div.tap > div.both > div.right > div.inner{
+        margin: 0 auto;
+        width: 80%
+    }
+    div.body-intruyen > div.tap > div.both > div.right > div.inner >a{
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+    }
+    div.body-intruyen > div.tap > div.both > div.right > div.inner > a > input{
+        height: 46px;
+        width: 300px;
+        border-radius: 40px;
+        background-color: black;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 2px;
+        text-align: center;
+    }
+    div.body-intruyen > div.tap > div.both > div.right > div.inner > p.content{
+        padding: 30px 0px;
+        text-indent: 30px;
+    }
+
+
+    /*CSS FOR TRUYEN.HTML*/
+    div.head{
+        background-color: rgb(37, 37, 37);
+        height: 55px;
+        position: sticky;
+        top: 0;
+    }
+    div.head > div.left{
+        position: absolute;
+        top: 0;
+    }
+    div.head > div.left > a > img{
+        height: 55px;
+    }
+    div.head > div.left > a.name{
+        font-size: 25px;
+        line-height: 55px;
+        padding: 0px 20px;
+        color: white;
+    }
+    div.head > div.left > i{
+        font-size: 25px;
+        line-height: 55px;
+        padding: 0px 20px 0px 0px;
+        color: white;
+    }
+    div.head > div.left >  p{
+        font-size: 20px; 
+        color: white;
+        line-height: 55px;
+    }
+    div.head > div.mid{
+        margin: 0 auto;
+    }
+    div.head > div.mid > a > i{
+        font-size: 50px;
+        padding: 0px 20px;
+        color: #a53ff8c9;
+    }
+    div.head > div.mid > a > i:hover{
+        color: #c082f3c9;
+    }
+    div.anh{
+        margin: 0 auto;
+        width: 800px;
+        margin-bottom: 30px;
+    }
+    div.anh > img{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
+        vertical-align: top;
+    }
+}
+@media (max-width: 400px) {
+    div.head > div.menu-bar{
+        display: none !important;
+    }
+    .smartphone{
+        display: block;
+    }
+
+}
