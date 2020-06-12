@@ -1,9 +1,15 @@
 * {
   font-family: Roboto, Helvetica, Arial, sans-serif;
-  padding: 0;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+img,
+a,
+ul,
+li {
+  padding: 0;
 }
 
 a {
@@ -18,7 +24,6 @@ ul {
 
 body {
   background-color: #f0f0f0;
-  font-size: 14px;
 }
 
 html {
@@ -133,7 +138,6 @@ header {
 
 .input .search-icon i {
   color: #2f89fc;
-  font-size: 16px;
 }
 
 .header-contain {
@@ -206,7 +210,6 @@ header {
 }
 
 .danh-muc-qc .danh-muc-qc-contain .danh-muc-sp .danh-muc-sp-contain > li {
-  font-size: 16px;
   height: 40px;
   font-weight: 300;
 }
@@ -237,13 +240,11 @@ header {
 .danh-muc-qc .danh-muc-qc-contain .danh-muc-sp .danh-muc-sp-contain > li ul.lv2 a {
   padding: 10px;
   color: black;
-  font-size: 16px;
 }
 
 .danh-muc-qc .danh-muc-qc-contain .danh-muc-sp .danh-muc-sp-contain > li ul.lv2 .lv3 {
   list-style-type: circle;
   padding-left: 30px;
-  font-size: 14px;
   font-weight: 300;
 }
 
@@ -263,6 +264,7 @@ header {
   -webkit-box-flex: 5;
       -ms-flex: 5;
           flex: 5;
+  overflow: hidden;
 }
 
 .danh-muc-qc .danh-muc-qc-contain .qc .qc-contain {
@@ -287,7 +289,6 @@ header {
 
 .for-you-deal .deal-title h3 {
   padding: 15px 0 0 20px;
-  font-size: 18px;
 }
 
 .for-you-deal .deal-title p {
@@ -341,20 +342,40 @@ li.product .product-name {
   height: 60px;
   padding: 10px;
   font-weight: 300;
-  font-size: 16px;
   overflow: auto;
 }
 
 li.product .product-price-sale {
   padding: 10px;
-  font-size: 16px;
   font-weight: 500;
 }
 
 li.product .product-price {
-  font-size: 14px;
   text-decoration: line-through;
   font-weight: 300;
+}
+
+li.product .danh-gia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 0 10px;
+}
+
+li.product .danh-gia li {
+  width: 15px;
+  margin: 0;
+  color: #ffc120;
+}
+
+li.product .danh-gia li:last-child {
+  color: black;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .muc-quan-tam {
@@ -388,7 +409,6 @@ li.product .product-price {
   border-bottom: 1px solid #f0f0f0;
   height: 70px;
   padding: 15px 0 0 20px;
-  font-size: 18px;
   background-color: white;
 }
 
@@ -430,6 +450,23 @@ li.product .product-price {
       flex-wrap: wrap;
 }
 
+.go-top {
+  position: fixed;
+  right: 5vw;
+  bottom: 5vh;
+}
+
+.go-top > a {
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+}
+
+.go-top > a i {
+  color: #2f89fc;
+}
+
 footer {
   margin-top: 20px;
   background-color: white;
@@ -461,7 +498,6 @@ footer .footer-contain .gioi-thieu ul.gioi-thieu-contain li.gioi-thieu-lv2 {
 }
 
 footer .footer-contain .gioi-thieu ul.gioi-thieu-contain li.gioi-thieu-lv2 .gioi-thieu-title {
-  font-size: 16px;
   padding: 10px 0;
 }
 
@@ -476,7 +512,6 @@ footer .footer-contain .gioi-thieu ul.gioi-thieu-contain li.gioi-thieu-lv2 ul.gi
 
 footer .footer-contain .gioi-thieu ul.gioi-thieu-contain li.gioi-thieu-lv2 ul.icon-app {
   list-style-type: none;
-  font-size: 25px;
 }
 
 footer .footer-contain .gioi-thieu ul.gioi-thieu-contain li.gioi-thieu-lv2 ul.icon-app li a {
@@ -497,10 +532,6 @@ footer .footer-contain .dia-chi {
   padding: 20px 40px;
 }
 
-footer .footer-contain .dia-chi h3 {
-  font-size: 18px;
-}
-
 footer .footer-contain .dia-chi ul li {
   padding: 20px;
   font-weight: 300;
@@ -510,7 +541,6 @@ footer .footer-contain .ban-quyen {
   border-top: 1px solid #f0f0f0;
   padding: 0px 20px 0px 20px;
   line-height: 20px;
-  font-size: 14px;
   font-weight: 300;
 }
 
@@ -559,7 +589,6 @@ footer .footer-contain .ban-quyen {
   }
   .input-mobile > .search-icon i {
     color: #2f89fc;
-    font-size: 16px;
   }
   .danh-muc-qc-contain,
   .for-you-deal,
@@ -608,19 +637,16 @@ footer .footer-contain .ban-quyen {
     padding: 5px 0 0 0px !important;
     height: 50px !important;
   }
-  .deal-product, .ds-danh-rieng {
+  .deal-product,
+  .ds-danh-rieng {
     -webkit-box-flex: 30% !important;
         -ms-flex: 30% !important;
             flex: 30% !important;
     padding: 5px !important;
   }
-  .product-name, .product-price-sale, span {
-    font-size: 12px !important;
-  }
   .sale {
     height: 25px !important;
     width: 25px !important;
-    font-size: 11px !important;
     line-height: 19px !important;
   }
   li.product {
@@ -660,10 +686,14 @@ footer .footer-contain .ban-quyen {
     -webkit-transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
-  .muc-quan-tam, .tu-khoa-hot, .danh-rieng {
+  .muc-quan-tam,
+  .tu-khoa-hot,
+  .danh-rieng {
     margin-top: 5px !important;
   }
-  .muc-quan-tam-title, .tu-khoa-hot-title, .danh-rieng-title {
+  .muc-quan-tam-title,
+  .tu-khoa-hot-title,
+  .danh-rieng-title {
     height: 50px !important;
   }
   .ds-quan-tam {
@@ -685,7 +715,6 @@ footer .footer-contain .ban-quyen {
     width: -moz-max-content;
     width: max-content;
     padding: 0px;
-    font-size: 14px;
   }
   .ds-quan-tam li:active img {
     -webkit-transform: scale(1.1);
@@ -738,7 +767,7 @@ footer .footer-contain .ban-quyen {
     list-style-type: none !important;
   }
   .gioi-thieu-lv3 > li > a {
-    padding: 10px !important;
+    padding: 8px 10px !important;
   }
   .dia-chi {
     padding-left: 20px !important;
@@ -746,15 +775,6 @@ footer .footer-contain .ban-quyen {
   }
   .dia-chi-contain > li {
     padding: 10px !important;
-  }
-  .go-top {
-    position: fixed;
-    right: 5vw;
-    bottom: 5vh;
-  }
-  .go-top i {
-    color: 0;
-    font-size: 25px;
   }
 }
 
@@ -766,6 +786,9 @@ footer .footer-contain .ban-quyen {
     -webkit-box-flex: 2 !important;
         -ms-flex: 2 !important;
             flex: 2 !important;
+  }
+  .product-name {
+    overflow: hidden !important;
   }
   .input {
     -webkit-box-flex: 10 !important;
@@ -839,7 +862,6 @@ footer .footer-contain .ban-quyen {
   .sale {
     height: 30px !important;
     width: 30px !important;
-    font-size: 12px !important;
     line-height: 27px !important;
   }
   .xem-them {
@@ -881,7 +903,6 @@ footer .footer-contain .ban-quyen {
     width: -moz-max-content;
     width: max-content;
     padding: 10px;
-    font-size: 14px;
   }
   .ds-quan-tam li:active img {
     -webkit-transform: scale(1.1);
@@ -987,7 +1008,6 @@ footer .footer-contain .ban-quyen {
   }
   .ds-quan-tam li p {
     padding: 15px;
-    font-size: 16px;
   }
   .ds-quan-tam li:hover img {
     -webkit-transform: scale(1.1);
